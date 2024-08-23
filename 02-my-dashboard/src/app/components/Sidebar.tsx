@@ -1,4 +1,4 @@
-import { TbAbacus, TbLayoutDashboard } from "react-icons/tb";
+import { TbAbacus, TbLayoutDashboard, TbPokeball } from "react-icons/tb";
 import { SidebarMenuItem } from "./SidebarMenuItem";
 
 const menuItems = [
@@ -13,6 +13,12 @@ const menuItems = [
     icon: <TbAbacus size={25} color="#2c3e50"/>,
     title: "Counter",
     subtitle: "Contador Client Side",
+  },
+  {
+    path: "/dashboard/pokemon",
+    icon: <TbPokeball size={25} color="#2c3e50"/>,
+    title: "Poke API",
+    subtitle: "Pokemons - static generation",
   },
 ];
 
