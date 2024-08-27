@@ -43,10 +43,12 @@ export const Navbar = () => {
           </div>
           <div className="flex items-center">
             <div className="flex items-center ms-3">
-              <img
+              <Image
                 className="w-8 h-8 rounded-full"
                 src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                 alt="user photo"
+                width={32}
+                height={32}
               />
             </div>
           </div>

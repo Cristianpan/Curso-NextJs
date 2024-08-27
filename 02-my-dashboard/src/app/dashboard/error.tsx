@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
@@ -8,10 +10,12 @@ interface ErrorProps {
 export default function Error({ error, reset }: ErrorProps) {
   return (
     <div className="w-full h-[calc(100vh-6rem)] flex flex-col items-center justify-center">
-      <img
+      <Image
         className="w-1/2 md:w-1/3 lg:w-1/4"
         src="/server-error.svg"
         alt="server error image"
+        width={30}
+        height={30}
       />
 
       <div className="flex flex-col items-center justify-center">
