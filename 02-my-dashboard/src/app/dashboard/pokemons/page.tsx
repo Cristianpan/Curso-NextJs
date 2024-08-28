@@ -1,6 +1,5 @@
 import { PokemonsResponse, SimplePokemon } from "@/app/interfaces";
-import Image from "next/image";
-import { PokemonCard } from "./components";
+import { PokemonGrid } from "./components/pokemonGrid";
 
 const getPokemons = async (
   limit = 20,
@@ -22,11 +21,9 @@ const getPokemons = async (
 export default async function PokemonPage() {
   const pokemons = await getPokemons();
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 gap-5">
-      {
-        pokemons.map((pokemon)=> <PokemonCard key={pokemon.id} {...pokemon} /> )
-      }
-      
-    </div>
+    <>
+      <h1 className="text-xl mb-5">Pokemones</h1>
+      <PokemonGrid pokemons={pokemons} />
+    </>
   );
 }
