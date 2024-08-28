@@ -2,9 +2,12 @@ import { SimplePokemon } from "@/app/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 
-export const PokemonCard = ({id, name}: SimplePokemon) => {
+export const PokemonCard = ({ id, name }: SimplePokemon) => {
   return (
-    <Link href={`/dashboard/pokemon/${id}`} className="flex justify-center relative items-center aspect-square rounded-md bg-gray-100 overflow-hidden group shadow-lg">
+    <Link
+      href={`/dashboard/pokemon/${name}`}
+      className="flex justify-center relative items-center aspect-square rounded-md bg-gray-100 overflow-hidden group shadow-lg"
+    >
       <Image
         className="group-hover:scale-150 transition-transform duration-700"
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
