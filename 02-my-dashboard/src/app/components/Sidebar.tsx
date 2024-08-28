@@ -15,7 +15,7 @@ const menuItems = [
     subtitle: "Contador Client Side",
   },
   {
-    path: "/dashboard/pokemon",
+    path: "/dashboard/pokemons",
     icon: <TbPokeball size={25} color="#2c3e50"/>,
     title: "Poke API",
     subtitle: "Pokemons - static generation",
