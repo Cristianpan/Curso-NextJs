@@ -1,4 +1,4 @@
-import { PokemonsResponse, SimplePokemon } from "@/app/interfaces";
+import { PokemonsResponse, SimplePokemon } from "@/interfaces";
 import { PokemonGrid } from "./components/pokemonGrid";
 
 const getPokemons = async (
@@ -11,7 +11,7 @@ const getPokemons = async (
   const data: PokemonsResponse = await response.json();
 
   const pokemons = data.results.map((pokemon) => ({
-    id: pokemon.url.split("/").at(-2)!,
+    id: +pokemon.url.split("/").at(-2)!,
     name: pokemon.name,
   }));
 
