@@ -3,17 +3,19 @@ import { Todo } from "@prisma/client";
 import { TodoItem } from "./TodoItem";
 import { updateTodo } from "../helpers/todos";
 import { useRouter } from "next/navigation";
+import { toggleTodo } from "../actions/todo-actions";
 
 interface TodosGridProps {
   todos?: Todo[];
 }
 export const TodosGrid = ({ todos = [] }: TodosGridProps) => {
   const router = useRouter();
-  const toggleTodo = async (id: string, complete: boolean): Promise<Todo> => {
+/*   const toggleTodo = async (id: string, complete: boolean): Promise<Todo> => {
     const updatedTodo = await updateTodo(id, complete);
     router.refresh(); 
     return updatedTodo; 
-  };
+  }; */
+
   
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">

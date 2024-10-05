@@ -2,8 +2,8 @@
 
 import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
-import { createTodo, deleteTodosCompleted } from "../helpers/todos";
 import { useRouter } from "next/navigation";
+import { createTodo, deleteTodosCompleted } from "../actions/todo-actions";
 
 export const NewTodo = () => {
 
@@ -16,12 +16,10 @@ export const NewTodo = () => {
     if (!description.trim().length) return; 
 
     await createTodo(description); 
-    router.refresh(); 
     setDescription(""); 
   }
 
   const handleDeleteCompleted = async () => {
-    router.refresh(); 
     await deleteTodosCompleted(); 
   }
 
@@ -45,7 +43,7 @@ export const NewTodo = () => {
       </div>
 
       <button
-        onClick={ handleDeleteCompleted }
+        onClick={ handleDeleteCompleted}
         type="button"
         className="flex items-center justify-center rounded ml-2 bg-red-400 p-2 text-white hover:bg-red-700 transition-all w-1/6"
       >
