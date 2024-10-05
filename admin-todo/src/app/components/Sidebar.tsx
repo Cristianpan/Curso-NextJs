@@ -13,12 +13,12 @@ const menuItems = [
   },
   {
     title: "Rest TODOS",
-    path: "/rest-todos",
+    path: "/dashboard/rest-todos",
     icon: <IoCheckboxOutline size={30} />,
   },
   {
     title: "Server Action",
-    path: "/server-todos",
+    path: "/dashboard/server-todos",
     icon: <IoListOutline size={30} />,
   },
 ];
