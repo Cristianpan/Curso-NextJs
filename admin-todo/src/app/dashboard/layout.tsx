@@ -1,12 +1,3 @@
-// Admin Dashboard https://tailwindcomponents.com/component/dashboard-12
-import {
-  CiBellOn,
-  CiBookmarkCheck,
-  CiChat1,
-  CiLogout,
-  CiMenuBurger,
-  CiSearch,
-} from "react-icons/ci";
 import { Sidebar } from "../components/Sidebar";
 import { TopMenu } from "../components/TopMenu";
 
